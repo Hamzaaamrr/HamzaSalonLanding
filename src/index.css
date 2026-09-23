@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Outfit', sans-serif;
+  color: #09090b;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #fff; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #09090b; color: #fff; }
+
+.display { font-size: clamp(3.7rem, 8vw, 8.8rem); line-height: .88; letter-spacing: -.075em; font-weight: 500; }
+.section-title { font-size: clamp(3rem, 6.3vw, 7.2rem); line-height: .9; letter-spacing: -.07em; font-weight: 500; }
+.eyebrow { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; }
+.noise { position: relative; }
+.noise::after { content: ''; position: absolute; inset: 0; opacity: .025; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E"); }
+.featured-placeholder { background: linear-gradient(135deg, #c9c9c9 0%, #777 48%, #252525 100%); }
+.featured-placeholder::before, .placeholder-dark::before, .placeholder-light::before, .placeholder-mid::before { content: ''; position: absolute; inset: 12% 18%; border: 1px solid rgba(255,255,255,.2); transform: rotate(-7deg); }
+.placeholder-dark { position: relative; background: linear-gradient(145deg, #202023, #777 50%, #171719); }
+.placeholder-light { position: relative; background: linear-gradient(145deg, #e7e7e7, #a7a7a9 50%, #d7d7d8); }
+.placeholder-mid { position: relative; background: linear-gradient(145deg, #a5a5a7, #303034 55%, #bdbdbd); }
+.placeholder-text { position: absolute; left: 50%; top: 50%; width: max-content; transform: translate(-50%, -50%) rotate(-7deg); color: rgba(255,255,255,.5); font-size: 9px; font-weight: 600; letter-spacing: .2em; }
+.map-placeholder { background: #f9f9fa; }
+.map-lines { position: absolute; inset: 0; opacity: .75; background-image: linear-gradient(112deg, transparent 0 14%, #eaeaea 14.2% 14.5%, transparent 14.7% 36%, #eaeaea 36.2% 36.6%, transparent 36.8% 61%, #eaeaea 61.2% 61.7%, transparent 61.9%), linear-gradient(28deg, transparent 0 20%, #e4e4e5 20.2% 20.6%, transparent 20.8% 48%, #e4e4e5 48.2% 48.6%, transparent 48.8% 78%, #e4e4e5 78.2% 78.6%, transparent 78.8%); }
+
+@media (max-width: 640px) {
+  .display { font-size: clamp(3.25rem, 16vw, 5.2rem); }
+  .section-title { font-size: clamp(3rem, 16vw, 5rem); }
+}
