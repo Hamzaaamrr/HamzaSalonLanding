@@ -16,7 +16,8 @@
     "vite": "^8.3.0"
   },
   "scripts": {
-  "vercel-build": "npm ci && chmod +x node_modules/.bin/* && npm run build"
+    "build": "vite build",
+    "vercel-build": "npm run build"
   }
 }
 
